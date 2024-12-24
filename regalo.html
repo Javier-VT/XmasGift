@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Navidad, Manguito </title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffcccc, #ff9999);
+            color: #fff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #b30000;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-family: 'Pacifico', cursive;
+            font-size: 3em;
+            margin: 0;
+        }
+        .snowflakes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+        }
+        .snowflake {
+            position: absolute;
+            top: -10%;
+            left: 50%;
+            animation: fall 10s linear infinite;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            0% { transform: translateY(0) translateX(0); }
+            100% { transform: translateY(110vh) translateX(50px); }
+        }
+        main {
+            padding: 20px;
+        }
+        .photo-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .photo-gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer {
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #b30000;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+        footer p {
+            margin: 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Feliz Navidad, Mi Amor</h1>
+    </header>
+
+    <div class="snowflakes">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❄</div>
+    </div>
+
+    <main>
+        <h2>Quiero ya estar contigo...</h2>
+        <div class="photo-gallery">
+            <img src="src/image.png" alt="Recuerdo 1">
+            <img src="src/image-2.png" alt="Recuerdo 2">
+            <img src="src/image-3.png" alt="Recuerdo 3">
+        </div>
+        <h2>Mi amor...</h2>
+        <p>Gracias por terminar este año conmigo, como sé que pasaremos el siguiente y muchos más juntos,
+            creéme que esto contento de tenerte conmigo en los buenos y malos momentos a pesar de todo, gracias 
+            por soportarme y amarme con la misma intensidad que la haces desde el primer día, estoy dispuesto a
+            seguir peleando por ti, gracias por compartir tu tiempo conmigo y haré que cada segundo valga la pena. </p>
+        <p>Quiero seguir compartiendo mi amor, cariño y tiempo contigo, quiero seguir viviendo contigo hasta que 
+            mi cuerpo no pueda más, y que mi último latido sea para ti... Estoy contento, feliz y cómodo contigo, 
+            tu amor se siente tan cálido y sincero que es el único que quiero y necesito, estoy infinitamente 
+            agradecido de todo el amor que me das y claro que te lo doy correspondido. Nunca me atreveré a dejarte 
+            con el amor en las manos, y haré lo que sea por mantenerlo siemre... Te amo muchísimo mi niña, más de 
+            lo que tú crees que te amo... Feliz navidad mi manguito lindoooo... ❤️</p>
+
+        <h2>Hice este juego chikito jeje</h2>
+        <a href="juego.html" style="color: #fff; text-decoration: underline;">Haz clic aquí para jugar 🎮</a>
+    
+    </main>
+
+    <footer>
+        <p>Con todo mi amor, por siemre y para siempre... Tu manguito... ❤️</p>
+    </footer>
+
+    <script>
+        const snowflakes = document.querySelectorAll('.snowflake');
+        snowflakes.forEach((flake) => {
+            flake.style.left = `${Math.random() * 100}%`;
+            flake.style.animationDuration = `${Math.random() * 5 + 5}s`;
+            flake.style.fontSize = `${Math.random() * 20 + 10}px`;
+        });
+    </script>
+</body>
+</html>
